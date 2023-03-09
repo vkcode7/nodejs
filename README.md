@@ -1,5 +1,11 @@
 # nodejs
 
+course name: Master Node JS & Deno.js, build REST APIs with Node.js, GraphQL APIs, add Authentication, use MongoDB, SQL & much more!
+
+Academind by Maximilian Schwarzmüller
+https://academind.com/courses/paths
+
+
 git
 ====
 
@@ -13,3 +19,5 @@ git push
 
 nodejs
 ======
+nodejs.org -> install LTS verstion
+node -v

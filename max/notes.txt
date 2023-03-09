@@ -1,0 +1,47 @@
+to run your app just call
+node yourapp.js 
+
+run "npm init" to create default package.json file
+
+to install nodemon run
+npm install nodemon --save-dev
+
+if a package is misisng from project or need updated, just run
+npm install
+this will go through the packages.json and install(reinstall /update) the packages locally.
+
+You could install nodemon globally if you wanted (this is NOT required though - 
+because we can just run it locally): npm install -g nodemon would do the trick. 
+Specifically the -g flag ensures that the package gets added as a global package 
+which you now can use anywhere on your machine, directly from inside the terminal 
+or command prompt.
+
+when node is run theu nodemon, it watches code for any changes and restarts node.js 
+to pick up those changes automatically
+
+to use it change =>
+"start": "node app.js"
+to
+"start": "nodemon app.js"
+
+and then just use: npm start
+
+debugging:
+stop the node app 
+select the .js file in explorer, put breakpoints
+VS Code -> Run -> Start Debugging and select Node.js
+
+to restat Node automatically after editing code in debug mode, take following steps:
+Run -> Add configuration -> Node.js
+This will open launch.json under .vscode folder, add the following in that:
+    "restart": true,
+    "runtimeExecutable": "nodemon",
+    "console": "integratedTerminal"
+
+However debugger will fail as nodemon was installed locally earlier. We need to install it globally using:
+
+sudo npm install nodemon -g
+
+If you stop debugging, then nodemon has to be quit manually using ctrl-C.
+
+

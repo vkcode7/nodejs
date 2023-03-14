@@ -44,4 +44,16 @@ sudo npm install nodemon -g
 
 If you stop debugging, then nodemon has to be quit manually using ctrl-C.
 
+ExpressJS: Framework for nodejs to stick to busness logic
 
+Other frameowrks are Adonis.js, Koa, Sails.js
+
+To install expressJS run:
+ npm install --save express
+
+to use req.body() in expressJS we need to install a 3rd party package body-parser
+npm install --save body-parser
+
+npm install: simply parses your packages.json and install the depnedency packages 
+
+s6- Dynamic Content and Template Engines

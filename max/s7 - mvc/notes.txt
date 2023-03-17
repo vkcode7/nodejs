@@ -1,0 +1,7 @@
+MVC
+
+Models: represents data, fetch/save/update data here
+View: represents what users see
+Controller: connection point between models and views
+
+Routes: on which path which controller will execute

@@ -13,6 +13,7 @@ router.get('/add-product', (req, res, next) => {
     //res.send('<form action="/admin/add-product" method="POST"><input type="text" name="title"></input><button type="submit">Add Product</button></form>');
     //res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')); //path should be wrt app.js
     res.sendFile(path.join(rootDir, 'views', 'add-product.html')); //path should be wrt app.js
+    //res.render('add-product.pug', {docTitle: 'Add Product'});
 });
 
 // admin/add-product => POST request

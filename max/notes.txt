@@ -57,3 +57,16 @@ npm install --save body-parser
 npm install: simply parses your packages.json and install the depnedency packages 
 
 s6- Dynamic Content and Template Engines
+========================================
+
+HTML Template + (Inject dynamic) Node/Express Content = HTML Content
+
+Templating Engines: some popular free engines are:
+EJS, Pug (Jade), Handlebars
+
+EJS: <p><%= name %></p> => use normal HTML
+Pug: p #{name} => use minimal HTML
+Handlebars: <p>{{name}}</p> => use normal HTML
+
+Intall all these 3 packages:
+npm install --save ejs pug express-handlebars

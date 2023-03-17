@@ -11,8 +11,6 @@ const products = [];
 
 // /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
-  //res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
-  //res.render('add-product', {docTitle: 'Add Product', path: '/admin/add-product'}); //.pug is optional as pug is regd as view engine
   res.render('add-product', {
     prods:products, 
     docTitle: 'Add Product', 

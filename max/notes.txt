@@ -1,72 +1,9 @@
-to run your app just call
-node yourapp.js 
+Read notes from s6:
 
-run "npm init" to create default package.json file
+MVC
 
-to install nodemon run
-npm install nodemon --save-dev
+Models: represents data, fetch/save/update data here
+View: represents what users see
+Controller: connection point between models and views
 
-if a package is misisng from project or need updated, just run
-npm install
-this will go through the packages.json and install(reinstall /update) the packages locally.
-
-You could install nodemon globally if you wanted (this is NOT required though - 
-because we can just run it locally): npm install -g nodemon would do the trick. 
-Specifically the -g flag ensures that the package gets added as a global package 
-which you now can use anywhere on your machine, directly from inside the terminal 
-or command prompt.
-
-when node is run theu nodemon, it watches code for any changes and restarts node.js 
-to pick up those changes automatically
-
-to use it change =>
-"start": "node app.js"
-to
-"start": "nodemon app.js"
-
-and then just use: npm start
-
-debugging:
-stop the node app 
-select the .js file in explorer, put breakpoints
-VS Code -> Run -> Start Debugging and select Node.js
-
-to restat Node automatically after editing code in debug mode, take following steps:
-Run -> Add configuration -> Node.js
-This will open launch.json under .vscode folder, add the following in that:
-    "restart": true,
-    "runtimeExecutable": "nodemon",
-    "console": "integratedTerminal"
-
-However debugger will fail as nodemon was installed locally earlier. We need to install it globally using:
-
-sudo npm install nodemon -g
-
-If you stop debugging, then nodemon has to be quit manually using ctrl-C.
-
-ExpressJS: Framework for nodejs to stick to busness logic
-
-Other frameowrks are Adonis.js, Koa, Sails.js
-
-To install expressJS run:
- npm install --save express
-
-to use req.body() in expressJS we need to install a 3rd party package body-parser
-npm install --save body-parser
-
-npm install: simply parses your packages.json and install the depnedency packages 
-
-s6- Dynamic Content and Template Engines
-========================================
-
-HTML Template + (Inject dynamic) Node/Express Content = HTML Content
-
-Templating Engines: some popular free engines are:
-EJS, Pug (Jade), Handlebars
-
-EJS: <p><%= name %></p> => use normal HTML
-Pug: p #{name} => use minimal HTML
-Handlebars: <p>{{name}}</p> => use normal HTML
-
-Intall all these 3 packages:
-npm install --save ejs pug express-handlebars
+Routes: on which path which controller will execute

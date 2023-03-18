@@ -2,6 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const errorController = require('./controllers/error');
 
 const app = express();
 
@@ -13,18 +14,15 @@ app.set('view engine', 'ejs'); //use 'ejs' template engine
 
 app.set('views', 'views');
 
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-    /* engine rendering*/
-    res.render('404', {docTitle: '404 error', path: '/'}); //extension is optional as view engine knows that
-});
+app.use(errorController.get404);
 
 app.listen(3000);

@@ -2,8 +2,11 @@ Read notes from s6:
 
 MVC
 
-Models: represents data, fetch/save/update data here
+Models: represents data, fetch/save/update data here, contains data related logic
 View: represents what users see
-Controller: connection point between models and views
+Controller: connection point between models and views, make sure that model and 
+view can communicate both ways
 
 Routes: on which path which controller will execute
+
+More on MVC: https://developer.mozilla.org/en-US/docs/Glossary/MVC

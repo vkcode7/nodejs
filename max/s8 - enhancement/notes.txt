@@ -1,0 +1,6 @@
+This s8 builds on s7 by enhancing the shopping app further with following enhancements
+- creating the shop structure
+- adding more nav items
+- registering additional Routes
+- storing product data in file
+- displaying/ editing/ deleting products

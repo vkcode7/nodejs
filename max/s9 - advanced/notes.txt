@@ -3,3 +3,5 @@ This s9 builds on section s8 code by adding Dynamic Routes and Advanced Models
 - extracting dynamic params
 - passing data with POST requests
 - using Query params
+
+https://expressjs.com/en/guide/routing.html

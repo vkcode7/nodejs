@@ -70,3 +70,10 @@ Handlebars: <p>{{name}}</p> => use normal HTML
 
 Intall all these 3 packages:
 npm install --save ejs pug express-handlebars
+
+s10 - MySQL
+===========
+install MySQL dependency, it is a prod dependency
+npm install --save mysql2
+
+npm install --save sequelize

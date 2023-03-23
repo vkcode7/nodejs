@@ -1,0 +1,59 @@
+This section is combined 10 and 11 that deals with MySQL integration
+
+Section 10 changes are in utils/database.js, controllers/admin and controller/shop
+
+SQL vs No SQL
+
+SQL has Tables, NoSQL has collections
+Tables have records, collections have docs
+NoSQL can have redundant data in collections for performance reasons
+NoSQL has no strong data schema
+
+SQL has
+- data schemas
+- relations
+- multiple Tables
+- horizontal scaling is difficut as same DB cant be on multiple boxes
+- limited read and writes per seconds (thousands)
+
+NoSQL is
+- schemaless
+- data is segregated into few collections
+- typically data is nested or merged in a few collections
+- both Horiz and Vert scaling is possible
+- great performance for mass read and wrire requests
+
+MySQL Installation on MacOS:
+
+https://www.mysql.com/downloads/
+
+scroll to community downloads - https://dev.mysql.com/downloads/
+
+We need to install MySQL Community Server and Workbench, 
+use Legacy Password authentication durimng setup steps.
+
+run -> npm install --save mysql2
+
+this section will use connection pool, that will allow to get new connection from a 
+connection pool for multiple queries to be run
+
+Learn more about MySQL:
+https://github.com/sidorares/node-mysql2
+
+Squelize - 3rd party library that behind the scenes that map the javascript objects to SQL and 
+does all the heavy lifting so we dont have to write SQL code on our own.
+
+Seuelize is an Object Relational Mapping library and needs mysql2 package.
+
+Sequelize uses models to create objects, save and find them, much like entity framework in .NET.
+
+If you are good with mysql queries or if you want know what is going under the hood 
+than please go with mysql. Also if your project is complex and there will be thousands 
+of hits everyday then it will be a better option to proceed with mysql. 
+And if you are new to it and dont want to learn deeply it or your project is not complex 
+then please proceed with sequelize.
+
+since I am not interested in learning details of sequelize, I skipped 158 to 174.
+
+Sequelize Official Docs: http://docs.sequelizejs.com/
+

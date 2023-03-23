@@ -1,0 +1,3 @@
+First create a free MongoDB cluster on mongodb using MongoDB Atlas. It creates
+a DB using cloud providers (I selected AWS), creates a DB userid and pwd too.
+
